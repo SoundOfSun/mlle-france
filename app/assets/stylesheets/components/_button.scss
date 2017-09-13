@@ -1,0 +1,33 @@
+// My button
+.btn-sof {
+  background: $dark-blue;
+  border-radius: 5px;
+  text-decoration: none;
+  color: $white;
+  padding: 10px 15px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  opacity: 0.8;
+
+  &:hover {
+    text-decoration: none;
+    opacity: 1;
+    color: $white;
+  }
+}
+/* Grow */
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    // backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.08);
+}
