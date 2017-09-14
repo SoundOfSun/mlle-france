@@ -1,0 +1,43 @@
+.scroll-center {
+  display: block;
+  text-decoration: none;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+
+  &:hover, &:active, &:focus, &:visited {
+    text-decoration: none;
+  }
+
+  i {
+    color: $dark-blue;
+    font-size: 72px;
+    font-weight: 300;
+  }
+
+  p {
+    color: $dark-blue;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  // Floating effect bit
+  transform: translatey(0px);
+  animation: float 1.5s ease-in-out infinite;
+}
+// Floatin Effect (SASS)
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-10px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}

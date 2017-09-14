@@ -6,7 +6,7 @@
     </div>
   </div>
   <div class="about-content flexbox">
-    <div class="about-card about-flex-item">
+    <div class="about-card about-flex-item slideInDown">
       <div class="card-upper">
         <%= image_tag 'avatar.png', class: 'avatar' %>
         <p class="card-level">Design Cat</p>
@@ -33,4 +33,30 @@
       </div>
     </div>
   </div>
+  <div class="parallax-2">
+    <div class="parallax-content text-center">
+      <h2 class="margin-down">CHECK MY PROJECTS</h2>
+      <%= link_to 'Click here', projects_path, class: 'btn btn-sof hvr-grow' %>
+    </div>
+  </div>
+  <div class="about-footer">
+    <div class="row">
+      <a href="javascript:" class="floating scroll-center text-center" id="return-to-top">
+        <i class="fa fa-angle-up" aria-hidden="true"></i>
+        <p id="scroll-text">BACK TO TOP</p>
+      </a>
+    </div>
+  </div>
 </div>
+
+<%= content_for(:after_js) do %>
+  <%= javascript_tag do %>
+    $('#return-to-top').click(function() {
+    // When arrow is clicked
+      $('body,html').animate({
+          scrollTop : 0
+      // Scroll to top of body
+      }, 500);
+    });
+  <% end %>
+<% end %>

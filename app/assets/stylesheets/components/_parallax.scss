@@ -1,10 +1,7 @@
-.parallax {
+.parallax, .parallax-2 {
   display: flex;
   justify-content: space-around;
   align-items: center;
-
-  /* The image used */
-  background-image: linear-gradient(to bottom right, rgba(0,0,0,0.1), rgba(0,0,0,0.3)), url("parallax.jpeg");
 
   /* Set a specific height */
   height: 400px;
@@ -14,6 +11,14 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.parallax {
+  /* The image used */
+  background-image: linear-gradient(to bottom right, rgba(0,0,0,0.1), rgba(0,0,0,0.3)), url("parallax.jpeg");
+}
+.parallax-2 {
+  /* The image used */
+  background-image: linear-gradient(to bottom right, rgba(0,0,0,0.1), rgba(0,0,0,0.3)), url("parallax-2.jpg");
 }
 .parallax-content {
   color: $white;
