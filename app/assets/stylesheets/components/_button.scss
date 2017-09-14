@@ -31,3 +31,30 @@
 .hvr-grow:active {
     transform: scale(1.08);
 }
+// ABOUT button
+.about-btn {
+  background: $dark-blue;
+  color: $white;
+  font-weight: 700;
+
+  &:first-child {
+    border-bottom-left-radius: 5px;
+  }
+
+  &:last-child {
+    border-bottom-right-radius: 5px;
+  }
+
+  &:hover {
+    color: $white;
+  }
+
+  i {
+    font-size: 24px;
+
+    &:hover {
+      color: $light-grey;
+      cursor: pointer;
+    }
+  }
+}
