@@ -6,9 +6,12 @@
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
-
-    <a href="#" class="navbar-wagon-item navbar-wagon-link">ABOUT</a>
-    <a href="#" class="navbar-wagon-item navbar-wagon-link">PROJECTS</a>
+    <%= link_to about_path, class: 'navbar-wagon-item nav-link' do %>
+      <p>ABOUT</p>
+    <% end %>
+    <%= link_to projects_path, class: 'navbar-wagon-item nav-link' do %>
+      <p>PROJECTS</p>
+    <% end %>
 
     <!-- Profile picture with dropdown list -->
     <div class="navbar-wagon-item">
