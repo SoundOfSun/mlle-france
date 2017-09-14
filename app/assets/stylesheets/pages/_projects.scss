@@ -1,0 +1,13 @@
+.projects-layout {
+  padding: 20px 10px;
+
+  h2 {
+    text-transform: uppercase;
+    font-size: 30px;
+    color: $dark-blue;
+    letter-spacing: 5px;
+  }
+}
+.title-dev, .title-teach {
+  border-bottom: 1px solid $light-grey;
+}
