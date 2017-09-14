@@ -1,0 +1,35 @@
+.i-card-body {
+  color: $white;
+  text-shadow: 1px 0px 2px rgba(0,0,0,0.2);
+  position: relative;
+  height: 180px;
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.2)), url('placeholder.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+.card-category {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
+  letter-spacing: 1px;
+  font-weight: lighter;
+  opacity: 0.9;
+}
+.i-card-footer {
+  padding: 10px;
+  color: $darker-grey;
+  vertical-align: sub;
+
+  h3 {
+    color: $dark-blue;
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 20px;
+  }
+
+  p {
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
+}
