@@ -58,9 +58,22 @@
   </div>
   <div class="wrapper">
     <div class="product">
-      <div class="product-img">
+      <div class="product-img carousel slide carousel-fade" id="carousel" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel" data-slide-to="1"></li>
+          <li data-target="#carousel" data-slide-to="2"></li>
+        </ol>
         <span class="product-category">CATEGORY</span>
-        <img src="http://bit.ly/2tMBBTd" height="400" width="300">
+        <!-- Carousel items -->
+        <div class="carousel-inner">
+          <img src="http://bit.ly/2tMBBTd" height="400" width="300" class="active item">
+          <img src="http://bit.ly/2tMBBTd" height="400" width="300" class="item">
+          <img src="http://bit.ly/2tMBBTd" height="400" width="300" class="item">
+        </div>
+        <!-- Carousel nav -->
+        <a class="carousel-control left" href="#carousel" data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control right" href="#carousel" data-slide="next">&rsaquo;</a>
       </div>
       <div class="product-info">
         <div class="product-text">
@@ -71,8 +84,22 @@
       </div>
     </div>
     <div class="product">
-      <div class="product-img">
-        <img src="http://bit.ly/2tMBBTd" height="400" width="300">
+      <div class="product-img carousel slide carousel-fade" id="carousel" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel" data-slide-to="1"></li>
+          <li data-target="#carousel" data-slide-to="2"></li>
+        </ol>
+        <span class="product-category">CATEGORY</span>
+        <!-- Carousel items -->
+        <div class="carousel-inner">
+          <img src="http://bit.ly/2tMBBTd" height="400" width="300" class="active item">
+          <img src="http://bit.ly/2tMBBTd" height="400" width="300" class="item">
+          <img src="http://bit.ly/2tMBBTd" height="400" width="300" class="item">
+        </div>
+        <!-- Carousel nav -->
+        <a class="carousel-control left" href="#carousel" data-slide="prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+        <a class="carousel-control right" href="#carousel" data-slide="next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
       </div>
       <div class="product-info">
         <div class="product-text">
@@ -84,3 +111,9 @@
     </div>
   </div>
 </div>
+
+<%= content_for(:after_js) do %>
+  <%= javascript_tag do %>
+    $('.carousel').carousel();
+  <% end %>
+<% end %>
