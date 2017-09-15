@@ -21,14 +21,32 @@
     <div class="index-cards">
       <% @projects.each do |project| %>
         <% if project.job == 'coding' %>
-          <div class="index-card">
-            <div class="i-card-body">
-              <span class="card-category"><%= project.category.capitalize %></span>
+          <div class="product">
+            <div class="product-img carousel slide carousel-fade" id="carousel" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel" data-slide-to="1"></li>
+                <li data-target="#carousel" data-slide-to="2"></li>
+              </ol>
+              <span class="product-category">
+                <%= project.category.capitalize %>
+              </span>
+              <!-- Carousel items -->
+              <div class="carousel-inner">
+                <img src="http://bit.ly/2tMBBTd" height="400" width="300" class="active item">
+                <img src="http://bit.ly/2tMBBTd" height="400" width="300" class="item">
+                <img src="http://bit.ly/2tMBBTd" height="400" width="300" class="item">
+              </div>
+              <!-- Carousel nav -->
+              <a class="carousel-control left" href="#carousel" data-slide="prev">&lsaquo;</a>
+              <a class="carousel-control right" href="#carousel" data-slide="next">&rsaquo;</a>
             </div>
-            <div class="i-card-footer">
-              <h3><%= project.name.capitalize %></h3>
-              <p><%= project.description %></p>
-              <p><%= project.date %></p>
+            <div class="product-info">
+              <div class="product-text">
+                <h1><%= project.name.capitalize %></h1>
+                <h2><%= project.date %></h2>
+                <p><%= project.description %></p>
+              </div>
             </div>
           </div>
         <% end %>
@@ -42,75 +60,38 @@
     <div class="index-cards">
       <% @projects.each do |project| %>
         <% if project.job == 'teaching' %>
-          <div class="index-card">
-            <div class="i-card-body">
-              <span class="card-category"><%= project.category.capitalize %></span>
+          <div class="product">
+            <div class="product-img carousel slide carousel-fade" id="carousel" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel" data-slide-to="1"></li>
+                <li data-target="#carousel" data-slide-to="2"></li>
+              </ol>
+              <span class="product-category">
+                <%= project.category.capitalize %>
+              </span>
+              <!-- Carousel items -->
+              <div class="carousel-inner">
+                <img src="http://bit.ly/2tMBBTd" height="400" width="300" class="active item">
+                <img src="http://bit.ly/2tMBBTd" height="400" width="300" class="item">
+                <img src="http://bit.ly/2tMBBTd" height="400" width="300" class="item">
+              </div>
+              <!-- Carousel nav -->
+              <a class="carousel-control left" href="#carousel" data-slide="prev">&lsaquo;</a>
+              <a class="carousel-control right" href="#carousel" data-slide="next">&rsaquo;</a>
             </div>
-            <div class="i-card-footer">
-              <h3><%= project.name.capitalize %></h3>
-              <p><%= project.description %></p>
-              <p><%= project.date %></p>
+            <div class="product-info">
+              <div class="product-text">
+                <h1><%= project.name.capitalize %></h1>
+                <h2><%= project.date %></h2>
+                <p><%= project.description %></p>
+              </div>
             </div>
           </div>
         <% end %>
       <% end %>
     </div>
   </div>
-  <div class="wrapper">
-    <div class="product">
-      <div class="product-img carousel slide carousel-fade" id="carousel" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carousel" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel" data-slide-to="1"></li>
-          <li data-target="#carousel" data-slide-to="2"></li>
-        </ol>
-        <span class="product-category">CATEGORY</span>
-        <!-- Carousel items -->
-        <div class="carousel-inner">
-          <img src="http://bit.ly/2tMBBTd" height="400" width="300" class="active item">
-          <img src="http://bit.ly/2tMBBTd" height="400" width="300" class="item">
-          <img src="http://bit.ly/2tMBBTd" height="400" width="300" class="item">
-        </div>
-        <!-- Carousel nav -->
-        <a class="carousel-control left" href="#carousel" data-slide="prev">&lsaquo;</a>
-        <a class="carousel-control right" href="#carousel" data-slide="next">&rsaquo;</a>
-      </div>
-      <div class="product-info">
-        <div class="product-text">
-          <h1>Harvest Vase</h1>
-          <h2>by studio and friends</h2>
-          <p>Harvest Vases are a reinterpretation<br> of peeled fruits and vegetables as<br> functional objects. The surfaces<br> appear to be sliced and pulled aside,<br> allowing room for growth. </p>
-        </div>
-      </div>
-    </div>
-    <div class="product">
-      <div class="product-img carousel slide carousel-fade" id="carousel" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carousel" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel" data-slide-to="1"></li>
-          <li data-target="#carousel" data-slide-to="2"></li>
-        </ol>
-        <span class="product-category">CATEGORY</span>
-        <!-- Carousel items -->
-        <div class="carousel-inner">
-          <img src="http://bit.ly/2tMBBTd" height="400" width="300" class="active item">
-          <img src="http://bit.ly/2tMBBTd" height="400" width="300" class="item">
-          <img src="http://bit.ly/2tMBBTd" height="400" width="300" class="item">
-        </div>
-        <!-- Carousel nav -->
-        <a class="carousel-control left" href="#carousel" data-slide="prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
-        <a class="carousel-control right" href="#carousel" data-slide="next"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-      </div>
-      <div class="product-info">
-        <div class="product-text">
-          <h1>Harvest Vase</h1>
-          <h2>by studio and friends</h2>
-          <p>Harvest Vases are a reinterpretation<br> of peeled fruits and vegetables as<br> functional objects. The surfaces<br> appear to be sliced and pulled aside,<br> allowing room for growth. </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <%= content_for(:after_js) do %>
   <%= javascript_tag do %>
