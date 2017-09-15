@@ -22,24 +22,25 @@
       <% @projects.each do |project| %>
         <% if project.job == 'coding' %>
           <div class="product">
-            <div class="product-img carousel slide carousel-fade" id="carousel" data-ride="carousel">
+            <div class="product-img carousel slide carousel-fade" id="carousel-<%= project.id %>" data-ride="carousel">
               <ol class="carousel-indicators">
-                <li data-target="#carousel" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel" data-slide-to="1"></li>
-                <li data-target="#carousel" data-slide-to="2"></li>
+                <li data-target="#carousel-<%= project.id %>" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-<%= project.id %>" data-slide-to="1"></li>
+                <li data-target="#carousel-<%= project.id %>" data-slide-to="2"></li>
               </ol>
               <span class="product-category">
                 <%= project.category.capitalize %>
               </span>
               <!-- Carousel items -->
               <div class="carousel-inner">
-                <img src="http://bit.ly/2tMBBTd" height="400" width="300" class="active item">
-                <img src="http://bit.ly/2tMBBTd" height="400" width="300" class="item">
-                <img src="http://bit.ly/2tMBBTd" height="400" width="300" class="item">
+                <img src=<%= project.photos[0].url %> height="400" width="300" class="active item" style="object-fit: cover; object-position: 0 0;">
+                <% project.photos[1..-1].each do |photo| %>
+                  <img src=<%= photo.url %> height="400" width="300" class="item" style="object-fit: cover; object-position: 0 0;">
+                <% end %>
               </div>
               <!-- Carousel nav -->
-              <a class="carousel-control left" href="#carousel" data-slide="prev">&lsaquo;</a>
-              <a class="carousel-control right" href="#carousel" data-slide="next">&rsaquo;</a>
+              <a class="carousel-control left" href="#carousel-<%= project.id %>" data-slide="prev">&lsaquo;</a>
+              <a class="carousel-control right" href="#carousel-<%= project.id %>" data-slide="next">&rsaquo;</a>
             </div>
             <div class="product-info">
               <div class="product-text">
@@ -61,24 +62,25 @@
       <% @projects.each do |project| %>
         <% if project.job == 'teaching' %>
           <div class="product">
-            <div class="product-img carousel slide carousel-fade" id="carousel" data-ride="carousel">
+            <div class="product-img carousel slide carousel-fade" id="carousel-<%= project.id %>" data-ride="carousel">
               <ol class="carousel-indicators">
-                <li data-target="#carousel" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel" data-slide-to="1"></li>
-                <li data-target="#carousel" data-slide-to="2"></li>
+                <li data-target="#carousel-<%= project.id %>" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-<%= project.id %>" data-slide-to="1"></li>
+                <li data-target="#carousel-<%= project.id %>" data-slide-to="2"></li>
               </ol>
               <span class="product-category">
                 <%= project.category.capitalize %>
               </span>
               <!-- Carousel items -->
               <div class="carousel-inner">
-                <img src="http://bit.ly/2tMBBTd" height="400" width="300" class="active item">
-                <img src="http://bit.ly/2tMBBTd" height="400" width="300" class="item">
-                <img src="http://bit.ly/2tMBBTd" height="400" width="300" class="item">
+                <img src=<%= project.photos[0].url %> height="400" width="300" class="active item" style="object-fit: cover; object-position: 0 0;">
+                <% project.photos[1..-1].each do |photo| %>
+                  <img src=<%= photo.url %> height="400" width="300" class="item" style="object-fit: cover; object-position: 0 0;">
+                <% end %>
               </div>
               <!-- Carousel nav -->
-              <a class="carousel-control left" href="#carousel" data-slide="prev">&lsaquo;</a>
-              <a class="carousel-control right" href="#carousel" data-slide="next">&rsaquo;</a>
+              <a class="carousel-control left" href="#carousel-<%= project.id %>" data-slide="prev">&lsaquo;</a>
+              <a class="carousel-control right" href="#carousel-<%= project.id %>" data-slide="next">&rsaquo;</a>
             </div>
             <div class="product-info">
               <div class="product-text">
@@ -96,6 +98,12 @@
 
 <%= content_for(:after_js) do %>
   <%= javascript_tag do %>
-    $('.carousel').carousel();
+    <%# var carousels = document.querySelectorAll('.carousel')
+    carousels.forEach(function(carousel) {
+      carousel.carousel();
+    }); %>
+    $(document).ready(function() {
+      $('.carousel').carousel();
+    });
   <% end %>
 <% end %>
