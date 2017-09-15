@@ -42,13 +42,16 @@
   text-shadow: 1px 0 3px rgba(255,255,255,0.3);
   letter-spacing: 0.8px;
 
-  &:hover {
-    color: $light-grey;
+  p {
+    &:hover {
+      color: $light-grey;
+    }
+
+    &:visited {
+      color: $dark-blue;
+    }
   }
 
-  &:visited {
-    color: $dark-blue;
-  }
 }
 .nav-link, .nav-link:hover, .nav-link:active, .nav-link:visited, .nav-link:focus {
   text-decoration: none;
