@@ -26,10 +26,15 @@
   }
 
   .carousel-control {
-    background: transparent;
     position: absolute;
     top: 40%;
     font-size: 50px;
+    height: 80px;
+  }
+
+  .carousel-indicators {
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1));
+    border-radius: 50px;
   }
 }
 .carousel-pic {
