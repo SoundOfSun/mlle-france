@@ -30,8 +30,16 @@
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> About</a></li>
-        <li><a href="#"><i class="fa fa-picture-o" aria-hidden="true"></i> Projects</a></li>
+        <li>
+          <%= link_to about_path, class: 'navbar-wagon-item nav-link' do %>
+            <i class="fa fa-info-circle" aria-hidden="true"></i> About
+          <% end %>
+        </li>
+        <li>
+          <%= link_to projects_path, class: 'navbar-wagon-item nav-link' do %>
+            <i class="fa fa-picture-o" aria-hidden="true"></i> Projects
+          <% end %>
+        </li>
       </ul>
     </div>
   </div>
