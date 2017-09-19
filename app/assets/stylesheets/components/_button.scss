@@ -45,7 +45,7 @@
     border-bottom-right-radius: 5px;
   }
 
-  &:hover {
+  &:hover, &:visited {
     color: $white;
   }
 
