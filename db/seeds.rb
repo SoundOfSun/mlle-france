@@ -1,7 +1,7 @@
 Project.destroy_all
 
 p 'Populating Coding Projects'
-c4 = Project.create!(name: 'pulse', category: 'website', description: 'Le Wagon #93 final project. I designed all the front end for this app and used javascript to manage the avatars\' states', date: 'September 2017', job: 'coding')
+c4 = Project.create!(name: 'pulse', category: 'website', link: 'http://www.pulse.plus/', description: 'Le Wagon #93 final project. I designed all the front end for this app and used javascript to manage the avatars\' states', date: 'September 2017', job: 'coding')
 Photo.create!(url: 'http://res.cloudinary.com/cecile/image/upload/v1505488408/pulse-pic-1_zv96sn.png', project: c4)
 Photo.create!(url: 'http://res.cloudinary.com/cecile/image/upload/v1505488417/pulse-pic-2_fie6vr.png', project: c4)
 Photo.create!(url: 'http://res.cloudinary.com/cecile/image/upload/v1505488411/pulse-pic-3_lsbxmg.png', project: c4)
@@ -12,11 +12,11 @@ Photo.create!(url: 'http://res.cloudinary.com/cecile/image/upload/v1505488418/sk
 Photo.create!(url: 'http://res.cloudinary.com/cecile/image/upload/v1505488405/sketch-pulse-2_hz8yuy.png', project: c3)
 Photo.create!(url: 'http://res.cloudinary.com/cecile/image/upload/v1505488404/sketch-pulse-3_w0zb6l.png', project: c3)
 
-c2 = Project.create!(name: 'mr. cocktail', category: 'website', description: 'My first multi-pages RoR app. A Mr. Cocktail inspired, simple app to create cocktails and their specific doses. My first practice of CRUD on RoR.', date: 'August 2017', job: 'coding')
+c2 = Project.create!(name: 'mr. cocktail', category: 'website', link: 'http://mr-cocktail-soundofsun.herokuapp.com/', description: 'My first multi-pages RoR app. A Mr. Cocktail inspired, simple app to create cocktails and their specific doses. My first practice of CRUD on RoR.', date: 'August 2017', job: 'coding')
 Photo.create!(url: 'http://res.cloudinary.com/cecile/image/upload/v1505488407/cocktail-pic-1_cssgfz.png', project: c2)
 Photo.create!(url: 'http://res.cloudinary.com/cecile/image/upload/v1505488410/cocktail-pic-2_mj8hiz.png', project: c2)
 
-c1 = Project.create!(name: 'profile page', category: 'website', description: 'A first go at styling a whole page. Sidebar, buttons, forms and colour scheme.', date: 'August 2017', job: 'coding')
+c1 = Project.create!(name: 'profile page', category: 'website', link: 'https://soundofsun.github.io/profile/', description: 'A first go at styling a whole page. Sidebar, buttons, forms and colour scheme.', date: 'August 2017', job: 'coding')
 Photo.create!(url: 'http://res.cloudinary.com/cecile/image/upload/v1505488404/profile-pic-1_lwcszh.png', project: c1)
 Photo.create!(url: 'http://res.cloudinary.com/cecile/image/upload/v1505488408/profile-pic-2_sjoiyb.png', project: c1)
 
