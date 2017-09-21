@@ -17,7 +17,7 @@
   }
 }
 
-// ABOUT button
+// ABOUT button (card)
 .about-btn {
   background: $dark-blue;
   color: $white;
@@ -43,4 +43,29 @@
       cursor: pointer;
     }
   }
+}
+
+// INDEX button
+.btn-index {
+  width: 80%;
+  color: $dark-blue;
+  text-decoration: none;
+  padding: 10px 15px;
+  background: $white;
+  border-radius: 50px;
+  border: 1px solid $light-grey;
+  box-shadow: 1px 0px 3px rgba(0,0,0,0.2);
+
+  &:hover {
+    color: $light-grey;
+    text-decoration: none;
+  }
+
+  &:link, &:active, &:visited, &:focus {
+    color: $dark-blue;
+    text-decoration: none;
+  }
+}
+.btn-index-left {
+  border-right: 1px solid $darker-grey;
 }
