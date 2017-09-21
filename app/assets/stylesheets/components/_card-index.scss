@@ -31,8 +31,8 @@
   float: left;
   height: 400px;
   width: 300px;
-  border-radius: 0 7px 10px 7px;
-  background-color: #ffffff;
+  border-radius: 0 7px 7px 0px;
+  background-color: lighten($dark-blue, 70%);
 }
 .product-text {
   height: 300px;
@@ -46,7 +46,7 @@
   font-family: 'Bentham', serif;
 }
 .product-text h2 {
-  margin: 10px 0 47px 38px;
+  margin: 10px 0 28px 38px;
   font-size: 13px !important;
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
@@ -55,13 +55,13 @@
   letter-spacing: 0.1em;
 }
 .product-text p {
-  height: 125px;
+  height: 150px;
   padding-right: 10px;
   margin: 0 0 0 38px;
-  font-family: 'Playfair Display', serif;
-  color: $light-grey;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: $darker-grey;
   line-height: 1.7em;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: lighter;
   overflow: hidden;
 }
