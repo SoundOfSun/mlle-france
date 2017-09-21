@@ -42,15 +42,10 @@
   text-shadow: 1px 0 3px rgba(255,255,255,0.3);
   letter-spacing: 0.8px;
 
-  p {
-    &:hover, &:active, &:visited, &:focus {
-      color: $dark-blue;
-    }
+  &:link, &:hover, &:active, &:visited, &:focus {
+    text-decoration: none;
+    color: $dark-blue;
   }
-
-}
-.nav-link, .nav-link:hover, .nav-link:active, .nav-link:visited, .nav-link:focus {
-  text-decoration: none;
 }
 
 /* Dropdown menu */
