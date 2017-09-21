@@ -37,17 +37,13 @@
 /* Navbar link */
 .nav-link {
   color: $dark-blue;
-  font-size: 14px;
+  font-size: 16px;
   text-decoration: none;
   text-shadow: 1px 0 3px rgba(255,255,255,0.3);
   letter-spacing: 0.8px;
 
   p {
-    &:hover {
-      color: $light-grey;
-    }
-
-    &:visited {
+    &:hover, &:active, &:visited, &:focus {
       color: $dark-blue;
     }
   }
