@@ -24,12 +24,28 @@ body {
   padding: 20px 15px;
 }
 .about-footer {
-  height: 150px;
+  // height: 150px;
   width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  // display: flex;
+  // justify-content: space-around;
+  // align-items: center;
+
+  .row {
+    margin: 0;
+  }
 }
 .margin-down {
   margin-bottom: 30px;
+}
+.built-with-title {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 24px;
+  color: $darker-grey;
+  margin: 40px 0 20px 0;
+}
+.techs-icons {
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 32px;
+  color: $dark-blue;
 }
