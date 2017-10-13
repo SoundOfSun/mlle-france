@@ -3,7 +3,7 @@
   background: transparent;
   transition: all 0.3s ease;
   height: 70px;
-  padding: 0px 30px;
+  padding: 0px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -32,12 +32,16 @@
 .navbar-wagon-item {
   cursor: pointer;
   padding: 0 20px;
+
+  i {
+    font-size:  1.5rem;
+  }
 }
 
 /* Navbar link */
 .nav-link {
   color: $dark-blue;
-  font-size: 16px;
+  font-size: 1rem;
   text-decoration: none;
   text-shadow: 1px 0 3px rgba(255,255,255,0.3);
   letter-spacing: 0.8px;
